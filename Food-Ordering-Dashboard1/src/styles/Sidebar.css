@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&family=Roboto&display=swap');
+
+body{
+    background-color: #fff;
+}
+
+ul li:last-child {
+    position: absolute;
+    bottom: 50px;
+}
+
+
+.title{
+    padding: 40px 0 20px 40px;
+    font-size: 24px;
+}
+
+.sidebar{
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    background-color:  #fff9f1;
+}
+
+.icons {
+    font-size: 20px;
+    margin-right: 10px;
+    transform: scale(1.05);
+    vertical-align: middle; 
+  }
+  
+
+  .links {
+  list-style: none;
+  border-radius: 5px;
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.links:hover {
+  background-color: #fc7474;
+}
+
+.links:hover a {
+  color: #fff;
+}
+
+
+a{
+    color: rgb(54, 42, 42);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.link{
+    margin-right: 10px;
+    margin-left: 10px;
+} 
