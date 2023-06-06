@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import "../../styles/Sidebar.css"
 import { AiOutlineSetting, AiOutlineUser, AiOutlineUnorderedList} from "react-icons/ai"
@@ -38,7 +37,7 @@ function Sidebar() {
             </ul>
         </div>
     </div>
-  )
+  );
 }
 
 export default Sidebar;

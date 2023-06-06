@@ -4,11 +4,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Istok Web", sans-serif;
+    scroll-behavior: smooth;
+}
+
+li{
+  list-style: none;
 }
   
   .content {
+    height: 100%;
+    background-color: #f3f6fc;
     position: absolute;
     right: 0;
     width: calc(100% - 280px);
+
   }
   
