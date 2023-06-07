@@ -1,0 +1,55 @@
+.products__title{
+    font-size: 24px;
+    color: #27374D;
+    margin: 40px 0 40px 40px;
+}
+
+th:last-child{
+    text-align: center;
+}
+
+.product__btn{
+    margin-bottom: 20px;
+}
+
+.add__product--btn{
+    margin: 40px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #0d6efd;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.table__icon{
+    text-align: center;
+}
+.tbl__icon--edit, .tbl__icon--delete{
+    margin-right: 5px;
+    font-size: 20px;
+    vertical-align: middle; 
+}
+
+.edit-btn{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 0px;
+    width: 100%;
+    color: #333;
+    font-weight: bold;
+  }
+
+.delete-btn{
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 6px;
+    font-weight: bold;
+    background: #fcc7c7;
+    color: rgb(247, 62, 62);
+    border: none;
+    font-weight: bold;
+}
+  
