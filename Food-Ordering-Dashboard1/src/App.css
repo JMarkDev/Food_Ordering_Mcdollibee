@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Istok Web", sans-serif;
+    font-family: sans-serif, "arial";
     scroll-behavior: smooth;
 }
 
@@ -16,7 +16,7 @@ li{
     background-color: #f3f6fc;
     position: absolute;
     right: 0;
-    width: calc(100% - 280px);
+    width: calc(100% - 250px);
 
   }
   

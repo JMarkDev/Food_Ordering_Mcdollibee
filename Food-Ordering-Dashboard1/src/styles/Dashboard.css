@@ -2,23 +2,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 30px 0 30px;
+  padding: 5px 30px;
+  box-shadow: 0 26px 50px 0px rgba(0,0,0,0.1);
+}
+
+.nav__title, .nav__time{
+  color: #27374D;
+}
+
+.nav__time{
+  font-size: 14px;
+}
+
+.nav__title{
+  margin-bottom: 5px;
 }
 
 .search{
   display: flex;
+  width: 50%;
 }
 
 input{
-  width: 400px;
+  width: 100%;
   padding: 10px;
-  border-radius: 5px;
   margin-right: 60px;
+  border: none;
+  background-color: #f3f6fc;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder{
+  font-size: 16px;
+}
+input:focus{
+  outline: none;
+  font-size: 16px;
+}
+
+.search__icon{
+  right: 130px;
+  position: absolute;
 }
 
 .nav__icon{
   font-size: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
+  color: rgb(85, 82, 82);
+}
+
+.notification__icon{
+  background-color: #00BCD4;
+  border-radius: 50%;
+  color: #ffffff;
 }
 
 .dashboard__card {
@@ -30,9 +71,9 @@ input{
   }
   
   .cards {
-    width: 15rem;
+    width: 14rem;
     height: 120px;
-    background-color: #fffadd;
+    background-color: #00BCD4;
     padding: 20px;
     margin: 16px;
     display: flex;
@@ -51,29 +92,50 @@ input{
     width: 50px;
     height: 50px;
   }
+
+  .card__img{
+    width: 40px;
+  }
   
   .icon {
-    font-size: 40px;
-    color: #79e0ee;
+    font-size: 30px;
+    color:  #2B2A4C;
   }
   
   .card-title {
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 600;
+    color: #FCE9F1;
   }
   
   .total {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 900;
+    color: #ffffff;
   }
 
-  .dashboard-table{
-    margin: 0px 50px 0 50px;
+  .dashboard-table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px; 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 40px;
   }
-
-  th, td{
-    border: 1px solid black;
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
     padding: 8px;
+    text-align: left;
   }
-
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }

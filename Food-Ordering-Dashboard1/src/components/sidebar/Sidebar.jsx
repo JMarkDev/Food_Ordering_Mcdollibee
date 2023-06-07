@@ -4,12 +4,13 @@ import { AiOutlineSetting, AiOutlineUser, AiOutlineUnorderedList} from "react-ic
 import {BiCategory, BiLogOut} from "react-icons/bi";
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import {LuLayoutDashboard} from "react-icons/lu"
+import logo from "../../assets/images/logo1.png"
 
 function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebar-context">
-            <div className="title">Admin</div>
+            <img className='logo' src={logo} alt="website logo" />
         </div>
         <div className="sidebar-links">
             <ul className='link'>
