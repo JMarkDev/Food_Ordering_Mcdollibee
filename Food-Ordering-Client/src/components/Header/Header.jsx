@@ -1,7 +1,7 @@
 import React, { useRef, useState} from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Container } from "reactstrap";
-import logo from "../../assets/images/download.png";
+import logo from "../../assets/images/logo1.png";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -66,8 +66,7 @@ const Header = () => {
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
-            <img src={logo} alt="logo" />
-            <h5><span>McDo</span>libee</h5>
+            <img className="logo__img" src={logo} alt="logo" />
           </div>
 
           {/* ======= menu ======= */}
@@ -89,8 +88,8 @@ const Header = () => {
           {/* ======== nav right icons ========= */}
           <div className="nav__right d-flex align-items-center gap-4">
             <span className="cart__icon" onClick={toggleCart}>
+            <span className="cart__badge">{totalQuantity}</span>
               <i className="ri-shopping-cart-line"></i>
-              <span className="cart__badge">{totalQuantity}</span>
             </span>
 
             <span className="user" >

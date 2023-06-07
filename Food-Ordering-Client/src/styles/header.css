@@ -15,30 +15,21 @@
 }
 
 .header {
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
+width: 100%;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-.logo {
-  text-align: center;
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo img {
-  width: calc(100% - 60%);
-  object-fit: contain;
-  margin-top: -45px;
-  border-radius: 50%;
-}
-
-.logo h5 {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #ff1a1a;
-  margin-top: -30px;
-  margin-bottom: 0;
-}
-.logo h5 span{
-  color: #999900;
+.logo__img{
+  width: 120px;
+  border-radius: 10px;
 }
 
 
@@ -54,7 +45,7 @@
 }
 
 .active__menu {
-  color: #df2020 !important;
+  color: #df2020;
 }
 .cart__icon i,
 .user i,
@@ -62,6 +53,9 @@
   font-size: 1.5rem;
   color: #212245;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart__icon {
@@ -70,7 +64,6 @@
 
 .cart__badge {
   position: absolute;
-  top: 30px;
   right: -10px;
   background: #df2020;
   color: #fff;
@@ -89,24 +82,16 @@
   display: none;
 }
 
-.header__shrink {
-  position: sticky;
-  top: 0;
-  left: 0;
-  background: #fff;
-  z-index: 99999;
-  box-shadow: 5px 5px 15px -5px #fde4e4;
-}
-
 @media only screen and (max-width: 992px) {
-  .logo img {
-    width: calc(100% - 70%);
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .logo h5 {
-    font-size: 0.8rem;
-    margin-top: -15px;
+  .logo__img{
+    width: 120px;
+    border-radius: 10px;
   }
-
   .navigation {
     position: fixed;
     top: 0;
@@ -157,11 +142,9 @@
     height: 80px;
     line-height: 80px;
   }
-
-  .logo img {
-    margin-top: -40px !important;
-  }
-  .logo h5 {
-    margin-top: -30px;
+  .cart__badge {
+    position: absolute;
+    right: -10px;
+    margin-top: 15px;
   }
 }
