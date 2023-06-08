@@ -12,15 +12,22 @@ th:last-child{
     margin-bottom: 20px;
 }
 
-.add__product--btn{
-    margin: 40px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    background-color: #0d6efd;
-    border-radius: 6px;
-    color: #fff;
-    font-weight: 600;
+.modal-dialog {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 10px
 }
+
+.add__product--btn{
+    margin: 0 40px;
+    font-size: 1rem;
+    border-radius: 6px;
+} 
+
+  .save__btn {
+    float: right;
+  }
+  
 
 .table__icon{
     text-align: center;
@@ -39,17 +46,14 @@ th:last-child{
     padding: 5px 0px;
     width: 100%;
     color: #333;
-    font-weight: bold;
   }
 
 .delete-btn{
     width: 100%;
     padding: 5px 0px;
     border-radius: 6px;
-    font-weight: bold;
     background: #fcc7c7;
     color: rgb(247, 62, 62);
     border: none;
-    font-weight: bold;
 }
   
