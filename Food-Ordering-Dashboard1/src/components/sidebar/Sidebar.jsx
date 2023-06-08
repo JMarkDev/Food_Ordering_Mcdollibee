@@ -27,7 +27,7 @@ function Sidebar() {
                     <Link to="/orders"><AiOutlineUnorderedList className='icons'/>Orders</Link>
                 </li>
                 <li className='links'>
-                    <Link to="/users"><AiOutlineUser className='icons'/>Users</Link>
+                    <Link to="/users"><AiOutlineUser className='icons'/>Customers</Link>
                 </li>
                 <li className='links'>
                     <Link to="/settings"><AiOutlineSetting className='icons'/>Settings</Link>

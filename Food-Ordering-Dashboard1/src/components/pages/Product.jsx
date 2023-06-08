@@ -2,8 +2,8 @@ import "../../styles/Products.css"
 import {TbEdit} from "react-icons/tb"
 import {RiDeleteBin5Line} from "react-icons/ri"
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, 
-  Form, Input, Label, FormGroup, FormText } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, 
+  Form, Input, Label, FormGroup} from 'reactstrap';  
 
 function Product(args) {
   const [modal, setModal] = useState(false);
@@ -98,12 +98,13 @@ function Product(args) {
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
-        <th>Id</th>
         <th>Image</th>
-        <th>Product name</th>
+        <th>Id</th>
+        <th>Title</th>
         <th>Price</th>
         <th>Category</th>
         <th>Description</th>
+        <th>Ratings</th>
         <th colSpan={2}>Action</th> 
         </tr>
       </thead>
@@ -115,6 +116,7 @@ function Product(args) {
           <td>Data 4</td>
           <td>Data 5</td>
           <td>Data 5</td>
+          <td>Data 5</td>
           <td className="table__icon">
             <button className="edit-btn">
               <TbEdit className="tbl__icon--edit"/>
@@ -135,6 +137,7 @@ function Product(args) {
           <td>Data 4</td>
           <td>Data 5</td>
           <td>Data 5</td>
+          <td>Data 5</td>
           <td className="table__icon">
             <button className="edit-btn">
               <TbEdit className="tbl__icon--edit"/>
@@ -150,6 +153,7 @@ function Product(args) {
         </tr>
         <tr>
           <td>Data 4</td>
+          <td>Data 5</td>
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 4</td>
@@ -170,9 +174,94 @@ function Product(args) {
         </tr>
         <tr>
           <td>Data 4</td>
+          <td>Data 5</td>
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 5</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <TbEdit className="tbl__icon--edit"/>
+                Edit
+            </button>
+          </td>
+          <td className="table__icon">
+              <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+            </td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 5</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <TbEdit className="tbl__icon--edit"/>
+                Edit
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 5</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <TbEdit className="tbl__icon--edit"/>
+                Edit
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 5</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <TbEdit className="tbl__icon--edit"/>
+                Edit
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
           <td>Data 5</td>
           <td>Data 5</td>
           <td className="table__icon">
@@ -192,26 +281,7 @@ function Product(args) {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 4</td>
-          <td>Data 4</td>
           <td>Data 5</td>
-          <td>Data 5</td>
-          <td className="table__icon">
-            <button className="edit-btn">
-              <TbEdit className="tbl__icon--edit"/>
-                Edit
-            </button>
-          </td>
-          <td className="table__icon">
-            <button className="delete-btn">
-                <RiDeleteBin5Line className="tbl__icon--delete"/>
-                Delete
-            </button>
-            </td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 4</td>
-          <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
           <td>Data 5</td>

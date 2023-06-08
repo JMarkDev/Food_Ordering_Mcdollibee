@@ -5,6 +5,9 @@ import {AiOutlineSearch} from "react-icons/ai"
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import RevenueImg from "../../assets/images/revenue.png"
 import OrdersImg from "../../assets/images/order.png"
+import viewIcon from "../../assets/images/file.png"
+import {RiDeleteBin5Line} from "react-icons/ri"
+
 function Dashboard() {
   return (
     <>
@@ -77,8 +80,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Data 4</td>
@@ -86,8 +99,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Data 4</td>
@@ -95,8 +118,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Data 4</td>
@@ -104,8 +137,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Data 4</td>
@@ -113,8 +156,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
         <tr>
           <td>Data 4</td>
@@ -122,8 +175,18 @@ function Dashboard() {
           <td>Data 4</td>
           <td>Data 4</td>
           <td>Data 5</td>
-          <td>View</td>
-          <td>Delete</td>
+          <td className="table__icon">
+            <button className="edit-btn">
+              <img className="viewIcon" src={viewIcon} alt="view" />
+                View
+            </button>
+          </td>
+          <td className="table__icon">
+            <button className="delete-btn">
+                <RiDeleteBin5Line className="tbl__icon--delete"/>
+                Delete
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

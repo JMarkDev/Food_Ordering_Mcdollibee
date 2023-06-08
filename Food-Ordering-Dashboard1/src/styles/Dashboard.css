@@ -1,9 +1,19 @@
 .nav__dashboard{
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 30px;
   box-shadow: 0 26px 50px 0px rgba(0,0,0,0.1);
+}
+
+.viewIcon{
+  width: 20px;
+  margin-right: 5px;
+}
+
+.edit-btn{
+  background-color: red;
 }
 
 .nav__title, .nav__time{
@@ -72,7 +82,8 @@ input:focus{
   }
   
   .cards {
-    width: 14rem;
+    width: calc(25% - 40px);
+
     height: 120px;
     background-color: #00BCD4;
     padding: 20px;
@@ -115,4 +126,12 @@ input:focus{
     color:  #2B2A4C;
   }
 
- 
+.table-title{
+  font-size: 24px;
+}
+
+ @media screen and (max-width: 968px){
+  .cards{
+    width: calc(50% - 40px);
+  }
+ }

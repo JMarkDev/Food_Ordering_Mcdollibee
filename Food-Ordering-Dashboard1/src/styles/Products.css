@@ -19,6 +19,7 @@ th:last-child{
 }
 
 .add__product--btn{
+    outline: none;
     margin: 0 40px;
     font-size: 1rem;
     border-radius: 6px;
@@ -48,6 +49,10 @@ th:last-child{
     color: #333;
   }
 
+.edit-btn:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .delete-btn{
     width: 100%;
     padding: 5px 0px;
@@ -55,5 +60,9 @@ th:last-child{
     background: #fcc7c7;
     color: rgb(247, 62, 62);
     border: none;
+}
+
+.delete-btn:hover{
+    box-shadow: 0 0 4px rgba(247, 62, 62, 0.8);
 }
   

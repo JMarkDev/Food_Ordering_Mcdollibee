@@ -1,0 +1,27 @@
+.category__table{
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px; 
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 40px;
+}
+
+.edit-btn{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 0px;
+    width: 80%;
+    color: #333;
+  }
+
+.delete-btn{
+    width: 80%;
+    padding: 5px 0px;
+    border-radius: 6px;
+    background: #fcc7c7;
+    color: rgb(247, 62, 62);
+    border: none;
+}
