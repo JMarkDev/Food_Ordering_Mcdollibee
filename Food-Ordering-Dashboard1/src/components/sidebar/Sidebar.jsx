@@ -6,18 +6,43 @@ import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import {LuLayoutDashboard} from "react-icons/lu"
 import logo from "../../assets/images/logo2.png"
 
-function Sidebar() {
+function Sidebar({showSidebar}) {
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${showSidebar ? 'hide__sidebar' : ""}`}>
         <div className="sidebar-context">
             <img className='logo' src={logo} alt="website logo" />
         </div>
         <div className="sidebar-links">
             <ul className='link'>
                 <li className='links'>
-                    <Link to="/dashboard"><LuLayoutDashboard className='icons'/>Dashboard</Link>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
                 </li>
                 <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                <li className='links'>
+                    <LuLayoutDashboard className={`icons ${showSidebar ? 'icons' : ""}`}/>
+                    <Link to="/dashboard" className={`link ${showSidebar ? 'icons1' : ""}`}>Dashboard</Link>
+                </li>
+                {/* <li className='links'>
                     <Link to="/products"><MdOutlineProductionQuantityLimits className='icons'/>Products</Link>
                 </li>
                 <li className='links'>
@@ -34,7 +59,7 @@ function Sidebar() {
                 </li>
                 <li className='links'>
                     <Link to="/logout"><BiLogOut className='icons'/>Logout</Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     </div>

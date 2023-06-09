@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {IoIosNotificationsOutline} from "react-icons/io"
 import {AiOutlineSearch} from "react-icons/ai"
 import {RxHamburgerMenu} from "react-icons/rx"
 import "../../styles/Navbar.css"
 
-function Navbar() {
+function Navbar({handleSidebarToggle}) {
+
   return (
     <div className="nav__dashboard">
-    <div className="burger">
+    <div className="burger" onClick={handleSidebarToggle}>
       <RxHamburgerMenu className="burger__icon"/>
       {/* <p className="nav__time">Mon 30 June 2023 | 12:00 PM</p> */}
     </div>

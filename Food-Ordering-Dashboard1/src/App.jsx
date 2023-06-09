@@ -5,15 +5,22 @@ import Category from './components/pages/Category'
 import Settings from './components/pages/Settings'
 import Sidebar from './components/sidebar/Sidebar'
 import Order from './components/pages/Order'
+import React, { useState } from 'react';
 import User from './components/pages/User'
 import "./App.css"
 import Navbar from './components/navbar/Navbar'
 
 function App() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setShowSidebar(!showSidebar);
+    console.log('hahaha')
+  }
   return (
     <div className='app'>
-      <Sidebar />
-      <Navbar />
+      <Navbar showSidebar={showSidebar} handleSidebarToggle={handleSidebarToggle} />
+      <Sidebar showSidebar={showSidebar} />
         <div className="content">
         <Routes >
           <Route path='/' element={<Navigate to='/dashboard'/>} />
@@ -26,6 +33,7 @@ function App() {
         </Routes>
         </div>
     </div>
+
   )
 }
 
