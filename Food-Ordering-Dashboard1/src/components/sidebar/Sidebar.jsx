@@ -4,7 +4,7 @@ import { AiOutlineSetting, AiOutlineUser, AiOutlineUnorderedList} from "react-ic
 import {BiCategory, BiLogOut} from "react-icons/bi";
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import {LuLayoutDashboard} from "react-icons/lu"
-import logo from "../../assets/images/logo1.png"
+import logo from "../../assets/images/logo2.png"
 
 function Sidebar() {
   return (

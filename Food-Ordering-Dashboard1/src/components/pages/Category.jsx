@@ -13,9 +13,8 @@ function Category(args) {
   return (
     <> 
     <div className='category products'>
-      <h3 className="products__title">Category</h3>
-      <div className="product__btn">
-      <Button color="primary" className="add__product--btn" onClick={toggle}>
+      <div className="product__btn category">
+      <Button color="primary" className="add__category--btn" onClick={toggle}>
         Add category
       </Button>
       <Modal isOpen={modal} toggle={toggle} {...args} className="modal__body">
@@ -55,8 +54,8 @@ function Category(args) {
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
-        <th>Image</th>
         <th>Id</th>
+        <th>Image</th>
         <th>Title</th>
         <th colSpan={2}>Action</th> 
         </tr>

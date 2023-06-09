@@ -1,76 +1,7 @@
-.nav__dashboard{
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 30px;
-  box-shadow: 0 26px 50px 0px rgba(0,0,0,0.1);
-}
 
 .viewIcon{
   width: 20px;
   margin-right: 5px;
-}
-
-.edit-btn{
-  background-color: red;
-}
-
-.nav__title, .nav__time{
-  font-size: 24px;
-  color: #27374D;
-}
-
-.nav__time{
-  font-size: 14px;
-}
-
-.nav__title{
-  margin-bottom: 5px;
-}
-
-.search{
-  display: flex;
-  width: 50%;
-}
-
-input{
-  width: 100%;
-  padding: 10px;
-  margin-right: 60px;
-  border: none;
-  background-color: #f3f6fc;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-input::placeholder{
-  font-size: 16px;
-}
-input:focus{
-  outline: none;
-  font-size: 16px;
-}
-
-.search__icon{
-  right: 130px;
-  position: absolute;
-}
-
-.nav__icon{
-  font-size: 24px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  color: rgb(85, 82, 82);
-}
-
-.notification__icon{
-  background-color: #00BCD4;
-  border-radius: 50%;
-  color: #ffffff;
 }
 
 .dashboard__card {
@@ -78,12 +9,11 @@ input:focus{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 0 20px;
   }
   
   .cards {
     width: calc(25% - 40px);
-
     height: 120px;
     background-color: #00BCD4;
     padding: 20px;

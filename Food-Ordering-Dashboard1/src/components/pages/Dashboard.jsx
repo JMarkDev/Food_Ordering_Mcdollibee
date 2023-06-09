@@ -1,7 +1,5 @@
 import "../../styles/Dashboard.css";
 import { FaUsers } from "react-icons/fa";
-import {IoIosNotificationsOutline} from "react-icons/io"
-import {AiOutlineSearch} from "react-icons/ai"
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import RevenueImg from "../../assets/images/revenue.png"
 import OrdersImg from "../../assets/images/order.png"
@@ -11,17 +9,6 @@ import {RiDeleteBin5Line} from "react-icons/ri"
 function Dashboard() {
   return (
     <>
-    <div className="nav__dashboard">
-      <div>
-        <h3 className="nav__title">Dashboard</h3>
-        <p className="nav__time">Mon 30 June 2023 | 12:00 PM</p>
-      </div>
-      <div className="search">
-        <input type="text" name="" id="" placeholder="search..."/>
-        <span className="nav__icon search__icon"><AiOutlineSearch /></span>
-        <span className="nav__icon notification__icon"><IoIosNotificationsOutline /></span>
-      </div>
-    </div>
     <div className='dashboard__card'>
       <div className='cards'>
         <div className='card-icon'>

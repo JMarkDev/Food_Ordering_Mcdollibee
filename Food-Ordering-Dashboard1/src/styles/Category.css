@@ -7,6 +7,10 @@
   margin: 0 40px;
 }
 
+.add__category--btn{
+  margin: 0 40px 20px;
+}
+
 .edit-btn{
     background-color: white;
     border: 1px solid #ccc;

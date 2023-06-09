@@ -12,11 +12,18 @@ function Product(args) {
 
   return (
     <div className='products'>
-      <h3 className="products__title">Products</h3>
-      <div className="product__btn">
+      <div className="product__btn product__options">
       <Button color="primary" className="add__product--btn" onClick={toggle}>
         Add product
       </Button>
+      <div className="dropdown">
+        <select name="" id="">
+          <option value="default">Default</option>
+          <option value="ascending">Low to high</option>
+          <option value="descending">High to low</option>
+          <option value="ratings">Ratings</option>
+        </select>
+      </div>
       <Modal isOpen={modal} toggle={toggle} {...args} className="modal__body">
         <ModalHeader toggle={toggle}>Add Products</ModalHeader>
         <ModalBody>
@@ -98,8 +105,8 @@ function Product(args) {
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
-        <th>Image</th>
         <th>Id</th>
+        <th>Image</th>
         <th>Title</th>
         <th>Price</th>
         <th>Category</th>

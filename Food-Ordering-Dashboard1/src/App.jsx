@@ -7,11 +7,13 @@ import Sidebar from './components/sidebar/Sidebar'
 import Order from './components/pages/Order'
 import User from './components/pages/User'
 import "./App.css"
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   return (
     <div className='app'>
       <Sidebar />
+      <Navbar />
         <div className="content">
         <Routes >
           <Route path='/' element={<Navigate to='/dashboard'/>} />

@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: sans-serif, "arial";
     scroll-behavior: smooth;
+    overflow-y: none;
 }
 
 li{
@@ -16,6 +17,7 @@ li{
     background-color: #f3f6fc;
     position: absolute;
     right: 0;
+    padding-top: 100px;
     width: calc(100% - 250px);
 
   }

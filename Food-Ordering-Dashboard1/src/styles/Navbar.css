@@ -1,0 +1,62 @@
+.nav__dashboard {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #f3f6fc;
+    box-shadow: 0 26px 50px 0px rgba(0,0,0,0.1);
+    z-index: 10; /* Ensures the fixed div appears above other elements */
+  }
+  
+  .burger__icon{
+    font-size: 24px;
+  }
+  
+  .search{
+    display: flex;
+    width: 50%;
+  }
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    background-color: #f3f6fc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  input::placeholder{
+    font-size: 16px;
+  }
+  input:focus{
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .search__icon{
+    right: 90px;
+    position: absolute;
+  }
+  
+  .nav__icon{
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: rgb(85, 82, 82);
+  }
+  
+  .notification__icon{
+    background-color: #00BCD4;
+    border-radius: 50%;
+    color: #ffffff;
+  }
+  

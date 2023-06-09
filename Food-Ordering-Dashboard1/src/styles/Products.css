@@ -8,14 +8,36 @@ th:last-child{
     text-align: center;
 }
 
-.product__btn{
+.product__options{
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown{
+    margin-right: 40px;
+}
+
+.dropdown select{
+    padding: 7px 20px;
+    border: 1px solid #fde4e4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown select:focus{
+    outline: none;
+}
+
+.dropdown:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .modal-dialog {
     max-width: 50%;
     margin: 0 auto;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .add__product--btn{
@@ -41,7 +63,7 @@ th:last-child{
 
 .edit-btn{
     background-color: white;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 5px 0px;

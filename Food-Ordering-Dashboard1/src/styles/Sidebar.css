@@ -16,10 +16,11 @@ ul li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 28px 0;
 }
+
 .logo{
-  width: 120px;
+  /* width: 120px; */
   border-radius: 10px;
 }
 
@@ -38,6 +39,10 @@ ul li:last-child {
     margin-right: 10px;
     transform: scale(1.05);
     vertical-align: middle; 
+  }
+
+  .sidebar-links{
+    padding: 20px 0;
   }
 
 .links {
