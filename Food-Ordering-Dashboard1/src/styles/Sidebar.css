@@ -7,30 +7,34 @@ body{
 }
 
 .hide__sidebar{
-  background-color: red !important;
-  width: 80px !important; 
+  width: 70px !important; 
 }
 
-.icons1{
+.link1{
   display: none;
+  background-color: white !important;
 }
+
 
 ul li:last-child {
     position: absolute;
     bottom: 50px;
-    width: 230px;
+    width: calc(100% - 20px);
 }
 
 .sidebar-context{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding: 20px 0 28px 0;
 }
 
 .logo{
   /* width: 120px; */
+  /* margin-right: 50px; */
   border-radius: 10px;
+  /* position: absolute;
+  left: 0; */
 }
 
 .sidebar{
@@ -56,11 +60,17 @@ ul li:last-child {
 
 .links {
     display: flex;
+    /* justify-content: center; */
     align-items: center;
     margin-right: 10px;
     margin-left: -20px;
     padding: 10px;
     border-radius: 50px;
+  }
+
+  .links1{
+    display: flex;
+    justify-content: center;
   }
   
   .links:hover {
@@ -69,13 +79,6 @@ ul li:last-child {
   
   .links:hover a {
     color: #fff;
-  }
-  
-  .icons {
-    font-size: 20px;
-    margin-right: 10px;
-    transform: scale(1.05);
-    vertical-align: middle; 
   }
   
   a {

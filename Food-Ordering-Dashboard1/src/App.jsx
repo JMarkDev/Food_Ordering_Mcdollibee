@@ -15,20 +15,21 @@ function App() {
 
   const handleSidebarToggle = () => {
     setShowSidebar(!showSidebar);
-    console.log('hahaha')
+    document.body.classList.toggle("hide-sidebar")
   }
+
   return (
     <div className='app'>
       <Navbar showSidebar={showSidebar} handleSidebarToggle={handleSidebarToggle} />
       <Sidebar showSidebar={showSidebar} />
-        <div className="content">
+        <div className={`content ${showSidebar ? 'content1' : ''}`}>
         <Routes >
           <Route path='/' element={<Navigate to='/dashboard'/>} />
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/products' element={<Products />}/>
           <Route path='/category' element={<Category />}/>
           <Route path='/orders' element={<Order />}/>
-          <Route path='/users' element={<User />} />
+          <Route path='/costumers' element={<User />} />
           <Route path='/settings' element={<Settings />}/>
         </Routes>
         </div>

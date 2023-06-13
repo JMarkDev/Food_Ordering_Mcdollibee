@@ -11,6 +11,10 @@
 li{
   list-style: none;
 }
+
+.hide-sidebar .show_links{
+  display: none;
+}
   
   .content {
     /* height: 100%; */
@@ -19,7 +23,10 @@ li{
     right: 0;
     padding-top: 100px;
     width: calc(100% - 250px);
+  }
 
+  .content1{
+    width: calc(100% - 70px);
   }
   
   .dashboard-table {

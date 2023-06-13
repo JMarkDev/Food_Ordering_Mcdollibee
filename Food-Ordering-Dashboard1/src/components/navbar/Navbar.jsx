@@ -4,10 +4,10 @@ import {AiOutlineSearch} from "react-icons/ai"
 import {RxHamburgerMenu} from "react-icons/rx"
 import "../../styles/Navbar.css"
 
-function Navbar({handleSidebarToggle}) {
+function Navbar({showSidebar, handleSidebarToggle}) {
 
   return (
-    <div className="nav__dashboard">
+    <div className={`nav__dashboard ${showSidebar ? 'nav__dashboard1' : ""}`}>
     <div className="burger" onClick={handleSidebarToggle}>
       <RxHamburgerMenu className="burger__icon"/>
       {/* <p className="nav__time">Mon 30 June 2023 | 12:00 PM</p> */}
