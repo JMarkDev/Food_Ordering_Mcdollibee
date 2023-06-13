@@ -8,11 +8,13 @@ body{
 
 .hide__sidebar{
   width: 70px !important; 
+  transition: width 0.3s ease;
 }
-
-.link1{
-  display: none;
-  background-color: white !important;
+.hide-sidebar  .links:hover a {
+  color: #fc7474;
+}
+.hide-sidebar  .links:hover {
+  background-color: #fff;
 }
 
 
@@ -27,14 +29,6 @@ ul li:last-child {
   /* justify-content: center; */
   align-items: center;
   padding: 20px 0 28px 0;
-}
-
-.logo{
-  /* width: 120px; */
-  /* margin-right: 50px; */
-  border-radius: 10px;
-  /* position: absolute;
-  left: 0; */
 }
 
 .sidebar{
@@ -60,17 +54,11 @@ ul li:last-child {
 
 .links {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     margin-right: 10px;
     margin-left: -20px;
     padding: 10px;
     border-radius: 50px;
-  }
-
-  .links1{
-    display: flex;
-    justify-content: center;
   }
   
   .links:hover {

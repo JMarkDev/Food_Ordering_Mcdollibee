@@ -8,6 +8,10 @@
     overflow-y: none;
 }
 
+body{
+  background-color: #f3f6fc;
+}
+
 li{
   list-style: none;
 }
@@ -17,7 +21,7 @@ li{
 }
   
   .content {
-    /* height: 100%; */
+    transition: width 0.3s ease;
     background-color: #f3f6fc;
     position: absolute;
     right: 0;
@@ -26,6 +30,7 @@ li{
   }
 
   .content1{
+    transition: width 0.3s ease;
     width: calc(100% - 70px);
   }
   

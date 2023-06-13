@@ -4,6 +4,16 @@
   margin-right: 5px;
 }
 
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status_icon{
+  font-size: 24px;
+}
+
 .dashboard__card {
     display: flex;
     justify-content: center;

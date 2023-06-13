@@ -27,26 +27,36 @@ function Sidebar({showSidebar}) {
                             <MdOutlineProductionQuantityLimits className='icons'/>
                             Products
                         </Link>
-                    </li>  
+                    </li>   
                     <li className="links">
-                        <BiCategory className='icons'/>
-                        <Link to="/category" className="link">Categories</Link>
+                        <Link to="/category" className="link">
+                            <BiCategory className='icons'/>
+                            Categories
+                        </Link>
                     </li>
                     <li className="links">
+                        <Link to="/orders" className="link">
                         <AiOutlineUnorderedList className='icons'/>
-                        <Link to="/orders" className="link">Orders</Link>
+                            Orders
+                        </Link>
                     </li>
                     <li className="links">
+                        <Link to="/costumers" className="link">
                         <AiOutlineUser className='icons'/>
-                        <Link to="/costumers" className="link">Customers</Link>
+                            Customers
+                        </Link>
                     </li>
                     <li className="links">
+                        <Link to="/settings" className="link">
                         <AiOutlineSetting className='icons'/>
-                        <Link to="/settings" className="link">Settings</Link>
+                            Settings
+                        </Link>
                     </li>
                     <li className="links">
-                        <BiLogOut className='icons'/>
-                        <Link to="/logout" className="link">Logout</Link>
+                        <Link to="/logout" className="link">
+                            <BiLogOut className='icons'/>
+                            Logout
+                        </Link>
                     </li>
                 </ul>
 

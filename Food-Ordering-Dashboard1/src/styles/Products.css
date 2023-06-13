@@ -26,6 +26,10 @@ th:last-child{
     cursor: pointer;
 }
 
+.product_img{
+    width: 50px;
+}
+
 .dropdown select:focus{
     outline: none;
 }
