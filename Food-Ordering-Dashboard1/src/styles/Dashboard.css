@@ -1,22 +1,38 @@
 
 
 .order_status{
-  background-color: rgb(243, 198, 198);
   border-radius: 5px;
-  color: #fc7474;
   font-weight: 500;
   text-align: center;
-  
+  padding: 5px;
+}
+
+
+.delivered {
+  color: green;
+  background-color: rgb(151, 226, 176);
+}
+
+.pending {
+  color: rgb(161, 161, 13);
+  background-color: rgb(240, 240, 181);
+}
+
+.cancelled {
+  background-color: rgb(243, 198, 198);
+  color: #f75353;
 }
 
 .select_status{
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
+  padding: 10px 0;
   display: none;
 }
 
 .status .select_status{
   display: block;
   position: absolute;
-  margin-top: 150px;
+  margin-top: 200px;
   margin-right: 100px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -54,7 +70,7 @@
 }
 
 .link_status:hover{
-  background-color: #f1fafa;
+  background-color: #d0fafa;
   color: #333;
 }
 
@@ -63,6 +79,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1); */
+  
 }
 
 .viewIcon{
@@ -71,6 +89,7 @@
 }
 
 .status_icon{
+  margin-top: 10px;
   font-size: 24px;
 }
 

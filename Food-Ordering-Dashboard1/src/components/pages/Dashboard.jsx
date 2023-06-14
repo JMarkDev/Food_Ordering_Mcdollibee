@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/Dashboard.css";
 import { FaUsers } from "react-icons/fa";
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
@@ -17,10 +17,9 @@ function Dashboard() {
   const orderStatus = () =>{
     setStatus(!status)
     document.body.classList.toggle("status")
-    console.log('cute')
   };
 
-  const recentOrder = [
+  const recentOrders = [
     { id: 1,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
@@ -28,7 +27,7 @@ function Dashboard() {
       status: "Delivered",
       amount: 100.00
     }, 
-    // { id: 1,
+    // { id: 2,
     //   orderDate: "January 01 2023",
     //   costumersName: "Josiel Mark Cute",
     //   paymentMethod: "Cash",
@@ -41,8 +40,26 @@ function Dashboard() {
     //   paymentMethod: "Cash",
     //   status: "Canceled",
     //   amount: 100.00
+    // },
+    // { id: 4,
+    //   orderDate: "January 01 2023",
+    //   costumersName: "Josiel Mark Cute",
+    //   paymentMethod: "Cash",
+    //   status: "Canceled",
+    //   amount: 100.00
     // }
   ]
+
+  const getOrderStatusClass = (status) => {
+    if (status === "Delivered") {
+      return "delivered";
+    } else if (status === "Pending") {
+      return "pending";
+    } else if (status === "Canceled") {
+      return "cancelled";
+    }
+    return ""; // empty string if status is unknown
+  };
 
   return (
     <>
@@ -99,38 +116,38 @@ function Dashboard() {
         </tr>
       </thead>
       <tbody>
-        {recentOrder.map(order => (
-            <tr key={order.id}>
-            <td>{order.id}</td>
-            <td>{order.orderDate}</td>
-            <td>{order.costumersName}</td>
-            <td>{order.paymentMethod}</td>
-            <td className="order_status">{order.status}</td>
-            <td>{order.amount}</td>
-            <td className="set_status">
-              <BsThreeDots className="status_icon" onClick={orderStatus}/>
-              <div className="select_status" >
-                {/* <select name="status" id="status"> */}
-                <a href="#" className="link_status"><FiCheckCircle className="link_icon accept_icon"/>Accept order</a>
-                <a href="#" className="link_status"><FiXCircle className="link_icon reject_icon"/>Reject order</a>
-                <a href="#" className="link_status"><FiAlertCircle className="link_icon view_icon"/>View order</a>
-                  {/* <option value="accept">Accept order</option>
-                  <option value="reject">Reject order</option>
-                  <option value="view">View order</option> */}
-                {/* </select> */}
-              </div>
-             
-              {/* <button className="edit-btn">
-                <img className="viewIcon" src={viewIcon} alt="view" />
-                  View
-              </button>
-              <button className="delete-btn">
-                  <RiDeleteBin5Line className="tbl__icon--delete"/>
-                  Delete
-              </button> */}
-            </td>
-          </tr>
-        ))}
+        {recentOrders.map((order) => (
+  <tr key={order.id}>
+    <td>{order.id}</td>
+    <td>{order.orderDate}</td>
+    <td>{order.costumersName}</td>
+    <td>{order.paymentMethod}</td>
+    <td>
+      <p className={`order_status ${getOrderStatusClass(order.status)}`}>
+        {order.status}
+      </p>
+    </td>
+    <td>{order.amount}</td>
+    <td className="set_status">
+      <BsThreeDots className="status_icon" onClick={orderStatus} />
+      <div className="select_status">
+        <a href="#" className="link_status">
+          <FiCheckCircle className="link_icon accept_icon" />
+          Accept order
+        </a>
+        <a href="#" className="link_status">
+          <FiXCircle className="link_icon reject_icon" />
+          Reject order
+        </a>
+        <a href="#" className="link_status">
+          <FiAlertCircle className="link_icon view_icon" />
+          View order
+        </a>
+      </div>
+    </td>
+  </tr>
+))}
+
         
 
       </tbody>
