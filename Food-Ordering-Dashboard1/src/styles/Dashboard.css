@@ -1,13 +1,73 @@
 
+
+.order_status{
+  background-color: rgb(243, 198, 198);
+  border-radius: 5px;
+  color: #fc7474;
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+.select_status{
+  display: none;
+}
+
+.status .select_status{
+  display: block;
+  position: absolute;
+  margin-top: 150px;
+  margin-right: 100px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.accept_icon{
+  color: #00FF00;
+}
+
+.link_icon{
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.reject_icon{
+  color: #FF0000;
+}
+
+.view_icon{
+  color: #0000FF;
+  rotate: 180deg;
+}
+
+.link_status{
+  padding: 5px;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.link_status:hover{
+  background-color: #f1fafa;
+  color: #333;
+}
+
+.set_status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .viewIcon{
   width: 20px;
   margin-right: 5px;
-}
-
-.status{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .status_icon{

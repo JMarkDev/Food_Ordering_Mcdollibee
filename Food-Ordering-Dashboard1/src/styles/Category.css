@@ -7,6 +7,10 @@
   margin: 0 40px;
 }
 
+.category_img{
+  width: 50px;
+}
+
 .add__category--btn{
   margin: 0 40px 20px;
 }
