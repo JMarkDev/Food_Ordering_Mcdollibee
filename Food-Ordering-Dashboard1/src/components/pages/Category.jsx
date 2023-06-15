@@ -77,7 +77,7 @@ function Category(args) {
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
-        <th>Id</th>
+        <th>Category Id</th>
         <th>Image</th>
         <th>Title</th>
         <th colSpan={2}>Action</th> 

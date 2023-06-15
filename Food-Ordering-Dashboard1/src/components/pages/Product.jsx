@@ -61,14 +61,6 @@ function Product(args) {
       <Button color="primary" className="add__product--btn" onClick={toggle}>
         Add product
       </Button>
-      <div className="dropdown">
-        <select name="" id="">
-          <option value="default">Default</option>
-          <option value="ascending">Low to high</option>
-          <option value="descending">High to low</option>
-          <option value="ratings">Ratings</option>
-        </select>
-      </div>
       <Modal isOpen={modal} toggle={toggle} {...args} className="modal__body">
         <ModalHeader toggle={toggle}>Add Products</ModalHeader>
         <ModalBody>
@@ -147,10 +139,20 @@ function Product(args) {
       </Modal>
       </div>
       <div className="dashboard-table">
+        <div className='sort_orders dropdown'>
+        <label htmlFor="sortDropdown">Sort By:</label>
+        <select id="sortDropdown">
+        <option value="default">Default</option>
+          <option value="ascending">Low to high</option>
+          <option value="descending">High to low</option>
+          <option value="ratings">Ratings</option>
+          {/* Add more sorting options as needed */}
+        </select>
+        </div>
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
-        <th>Id</th>
+        <th>Product Id</th>
         <th>Image</th>
         <th>Title</th>
         <th>Price</th>

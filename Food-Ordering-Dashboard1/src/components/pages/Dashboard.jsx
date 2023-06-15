@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../../styles/Dashboard.css";
 import { FaUsers } from "react-icons/fa";
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import RevenueImg from "../../assets/images/revenue.png"
 import OrdersImg from "../../assets/images/order.png"
-// import viewIcon from "../../assets/images/file.png"
-// import {RiDeleteBin5Line} from "react-icons/ri"
 import {BsThreeDots} from "react-icons/bs"
-// import {IoMdCheckmarkCircleOutline} from "react-icons/io"
 import {FiXCircle, FiCheckCircle, FiAlertCircle} from "react-icons/fi"
-// import {CiCircleInfo} from "react-icons/ci"
 
 function Dashboard() {
   const [activeOrderId, setActiveOrderId] = useState(null);
@@ -38,21 +34,21 @@ function Dashboard() {
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
-      status: "Canceled",
+      status: "Cancelled",
       amount: 100.00
     },
     { id: 4,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
-      status: "Canceled",
+      status: "Cancelled",
       amount: 100.00
     },
     { id: 5,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
-      status: "Canceled",
+      status: "Cancelled",
       amount: 100.00
     }
   ]
@@ -62,7 +58,7 @@ function Dashboard() {
       return "delivered";
     } else if (status === "Pending") {
       return "pending";
-    } else if (status === "Canceled") {
+    } else if (status === "Cancelled") {
       return "cancelled";
     }
     return ""; // empty string if status is unknown

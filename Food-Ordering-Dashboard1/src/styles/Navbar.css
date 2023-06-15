@@ -1,4 +1,5 @@
 .nav__dashboard {
+  transition: width 0.3s ease-in-out;
     position: fixed;
     top: 0;
     right: 0;
@@ -12,10 +13,22 @@
     z-index: 10; 
   }
 
+.nav_title{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
   .nav__dashboard1{
     width: calc(100% - 70px);
+    transition: width 0.3s ease-in-out;
   }
   
+  .burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .burger__icon{
     font-size: 24px;
   }

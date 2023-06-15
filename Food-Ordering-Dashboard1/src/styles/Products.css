@@ -15,9 +15,9 @@ th:last-child{
     align-items: center;
 }
 
-.dropdown{
+/* .dropdown{
     margin-right: 40px;
-}
+} */
 
 .dropdown select{
     padding: 7px 20px;
