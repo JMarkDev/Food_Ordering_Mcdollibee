@@ -12,11 +12,11 @@ import {FiXCircle, FiCheckCircle, FiAlertCircle} from "react-icons/fi"
 // import {CiCircleInfo} from "react-icons/ci"
 
 function Dashboard() {
-  const [status, setStatus] = useState(false);
+  const [activeOrderId, setActiveOrderId] = useState(null);
 
-  const orderStatus = () =>{
-    setStatus(!status)
-    document.body.classList.toggle("status")
+  const orderStatus = (orderId) => {
+    setActiveOrderId((prevOrderId) => (prevOrderId === orderId ? null : orderId));
+    document.body.classList.add("status");
   };
 
   const recentOrders = [
@@ -27,27 +27,34 @@ function Dashboard() {
       status: "Delivered",
       amount: 100.00
     }, 
-    // { id: 2,
-    //   orderDate: "January 01 2023",
-    //   costumersName: "Josiel Mark Cute",
-    //   paymentMethod: "Cash",
-    //   status: "Pending",
-    //   amount: 100.00
-    // },
-    // { id: 3,
-    //   orderDate: "January 01 2023",
-    //   costumersName: "Josiel Mark Cute",
-    //   paymentMethod: "Cash",
-    //   status: "Canceled",
-    //   amount: 100.00
-    // },
-    // { id: 4,
-    //   orderDate: "January 01 2023",
-    //   costumersName: "Josiel Mark Cute",
-    //   paymentMethod: "Cash",
-    //   status: "Canceled",
-    //   amount: 100.00
-    // }
+    { id: 2,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Pending",
+      amount: 100.00
+    },
+    { id: 3,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Canceled",
+      amount: 100.00
+    },
+    { id: 4,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Canceled",
+      amount: 100.00
+    },
+    { id: 5,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Canceled",
+      amount: 100.00
+    }
   ]
 
   const getOrderStatusClass = (status) => {
@@ -129,26 +136,28 @@ function Dashboard() {
     </td>
     <td>{order.amount}</td>
     <td className="set_status">
-      <BsThreeDots className="status_icon" onClick={orderStatus} />
-      <div className="select_status">
-        <a href="#" className="link_status">
-          <FiCheckCircle className="link_icon accept_icon" />
-          Accept order
-        </a>
-        <a href="#" className="link_status">
-          <FiXCircle className="link_icon reject_icon" />
-          Reject order
-        </a>
-        <a href="#" className="link_status">
-          <FiAlertCircle className="link_icon view_icon" />
-          View order
-        </a>
-      </div>
+      <BsThreeDots className="status_icon" 
+      onClick={() => orderStatus(order.id)} />
+      {activeOrderId === order.id && (
+              <div className="select_status">
+              <a href="#" className="link_status">
+                <FiCheckCircle className="link_icon accept_icon" />
+                Accept order
+              </a>
+              <a href="#" className="link_status">
+                <FiXCircle className="link_icon reject_icon" />
+                Reject order
+              </a>
+              <a href="#" className="link_status">
+                <FiAlertCircle className="link_icon view_icon" />
+                View order
+              </a>
+            </div>
+      )}
+
     </td>
   </tr>
 ))}
-
-        
 
       </tbody>
     </table>

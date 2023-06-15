@@ -32,16 +32,17 @@
 .status .select_status{
   display: block;
   position: absolute;
-  margin-top: 200px;
+  margin-bottom: 150px;
   margin-right: 100px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: center;
 }
 
 .accept_icon{
@@ -66,7 +67,7 @@
   padding: 5px;
   font-size: 16px;
   width: 100%;
-  text-align: left;
+  display: flex;
 }
 
 .link_status:hover{
@@ -89,6 +90,7 @@
 }
 
 .status_icon{
+  cursor: pointer;
   margin-top: 10px;
   font-size: 24px;
 }
