@@ -1,3 +1,7 @@
+.feature_title{
+  color: #06085a;
+}
+
 .why__choose-us{
   margin-bottom: -150px;
 }
@@ -41,6 +45,7 @@
   background: transparent;
   color: #fff;
 }
+
 
 .food__category button img {
   width: 20px;

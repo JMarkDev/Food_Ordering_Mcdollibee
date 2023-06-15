@@ -6,23 +6,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from "react-bootstrap";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/common-section/CommonSection";
+
 function AboutUs() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="App">
-        <Header/>
-      <div
-        className="container-fluid text-light"
-        style={{
-          backgroundColor: "#df2020",
-          height: 100,
-        }}>
-        <h1 className="navbar-text text-center font-monospace">
-          About McDollibee
-        </h1>
-      </div>
+    <Helmet title="About Us">
+    <div>
+        <Header />
+      <CommonSection title="About Us" />
       <div
         style={{
           marginLeft: "20%",
@@ -152,6 +147,7 @@ function AboutUs() {
       </div>
       <Footer/>
     </div>
+    </Helmet>
   );
 }
 

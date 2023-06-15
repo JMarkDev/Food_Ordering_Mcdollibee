@@ -34,7 +34,7 @@ const featureData = [
     description: "Serve great-tasting food, bringing the joy of eating to everyone.",
   },
   {
-    title: "No Minimum Order",
+    title: "Order Now",
     imgUrl: featureImg03,
     description: "Order in for yourself or for the group, with no restrictions on order value.",
   },
@@ -84,51 +84,7 @@ const Home = (props) => {
       setAllProducts(filteredProducts);
     }
   }, [category, products]);
-  
-  
 
-
-
-
-
-
-// useEffect(() => {
-//   if (category === "ALL") {
-//     setAllProducts(products);
-//   }
-
-//   if (category === "BURGER") {
-//     const filteredProducts = products.filter(
-//       (item) => item.category === "Burger"
-//     );
-
-//     setAllProducts(filteredProducts);
-//   }
-
-//   if (category === "PIZZA") {
-//     const filteredProducts = products.filter(
-//       (item) => item.category === "Pizza"
-//     );
-
-//     setAllProducts(filteredProducts);
-//   }
-
-//   if (category === "DRINKS") {
-//     const filteredProducts = products.filter(
-//       (item) => item.category === "Drinks"
-//     );
-
-//     setAllProducts(filteredProducts);
-//   }
-
-//   if (category === "DESSERT") {
-//     const filteredProducts = products.filter(
-//       (item) => item.category === "Desserts"
-//     );
-
-//     setAllProducts(filteredProducts);
-//   }
-// }, [category]);
 
 
   return (
@@ -197,12 +153,8 @@ const Home = (props) => {
             {featureData.map((item, index) => (
               <Col lg="4" md="6" sm="6" key={index} className="mt-5">
                 <div className="feature__item text-center px-5 py-3">
-                  <img
-                    src={item.image}
-                    alt="feature-img"
-                    className="w-25 mb-3"
-                  />
-                  <h5 className=" fw-bold mb-3">{item.title}</h5>
+                  <img src={item.imgUrl} alt="feature-img" className="w-25 mb-3"/>
+                  <h5 className="mb-3 feature_title">{item.title}</h5>
                   <p>{item.description}</p>
                 </div>
               </Col>
@@ -233,51 +185,6 @@ const Home = (props) => {
               {item.title}
             </button>
           ))}
-
-                {/* <button
-                  className="d-flex align-items-center gap-2"
-                >
-                  <img src={foodCategoryImg01} alt="" />
-                  Burger
-                </button> */}
-                {/* {category.map((item) => (
-          <Col lg="4" md="6" sm="6" key={item.id} className="mt-5">
-            <div className="category-item">
-              <img src={item.image} alt={item.title} />
-              <h5>{item.title}</h5>
-            </div>
-          </Col>
-        ))} */}
-{/* 
-                <button
-                  className={`d-flex align-items-center gap-2 ${
-                    category === "PIZZA" ? "foodBtnActive" : ""
-                  } `}
-                  onClick={() => setCategory("PIZZA")}
-                >
-                  <img src={foodCategoryImg02} alt="" />
-                  Pizza
-                </button>
-
-                <button
-                  className={`d-flex align-items-center gap-2 ${
-                    category === "DESSERT" ? "foodBtnActive" : ""
-                  } `}
-                  onClick={() => setCategory("DESSERT")}
-                >
-                  <img src={foodCategoryImg03} alt="" />
-                  Dessert
-                </button>
-
-                <button
-                  className={`d-flex align-items-center gap-2 ${
-                    category === "DRINKS" ? "foodBtnActive" : ""
-                  } `}
-                  onClick={() => setCategory("DRINKS")}
-                >
-                  <img src={foodCategoryImg04} alt="" />
-                  Drinks
-                </button> */}
               </div>
             </Col>
 
