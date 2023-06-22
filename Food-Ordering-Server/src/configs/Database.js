@@ -12,7 +12,7 @@ class Database {
   }
 
   TestConnection() {
-    this.connection.connect((err) => {
+    this.connection.connect((err)  => {
       if (err) return err;
       console.log("Database connected");
     });
