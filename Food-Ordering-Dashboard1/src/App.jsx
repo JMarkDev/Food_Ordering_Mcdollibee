@@ -4,6 +4,7 @@ import Products from "./components/pages/Product"
 import Category from './components/pages/Category'
 import Settings from './components/pages/Settings'
 import Sidebar from './components/sidebar/Sidebar'
+import Orderlist from './components/pages/Orderlist'
 import Order from './components/pages/Order'
 import React, { useState } from 'react';
 import User from './components/pages/User'
@@ -28,7 +29,8 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/products' element={<Products />}/>
           <Route path='/category' element={<Category />}/>
-          <Route path='/orders' element={<Order />}/>
+          <Route path='/order-list' element={<Orderlist/>}/>
+          <Route path='/order' element={<Order />}/>
           <Route path='/costumers' element={<User />} />
           <Route path='/settings' element={<Settings />}/>
         </Routes>

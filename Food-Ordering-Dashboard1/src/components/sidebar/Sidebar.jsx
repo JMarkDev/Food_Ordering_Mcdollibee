@@ -35,9 +35,9 @@ function Sidebar({showSidebar}) {
                         </Link>
                     </li>
                     <li className="links">
-                        <Link to="/orders" className="link">
+                        <Link to="/order-list" className="link">
                         <AiOutlineUnorderedList className='icons'/>
-                            Orders
+                            Order List
                         </Link>
                     </li>
                     <li className="links">
@@ -78,7 +78,7 @@ function Sidebar({showSidebar}) {
                     </Link>
                 </li>
                 <li className="links">
-                    <Link to="/orders" className="link">
+                    <Link to="/order-list" className="link">
                         <AiOutlineUnorderedList className='icons'/>
                     </Link>
                 </li>

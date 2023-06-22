@@ -8,6 +8,11 @@
     overflow-y: none;
 }
 
+.dashboard{
+  margin: 0 40px;
+  background-color: #fff;
+}
+
 body{
   background-color: #f3f6fc;
 }

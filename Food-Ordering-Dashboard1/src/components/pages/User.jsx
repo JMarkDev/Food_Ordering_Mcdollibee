@@ -3,7 +3,7 @@ import "../../styles/User.css"
 
 function User() {
   return (
-    <div className='user'>User</div>
+      <div className='dashboard'>User</div>
   )
 }
 

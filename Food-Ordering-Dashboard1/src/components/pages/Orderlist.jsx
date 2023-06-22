@@ -1,14 +1,10 @@
-import { useState } from "react";
-import "../../styles/Dashboard.css";
-import { FaUsers } from "react-icons/fa";
-import {MdOutlineProductionQuantityLimits} from "react-icons/md"
-import RevenueImg from "../../assets/images/revenue.png"
-import OrdersImg from "../../assets/images/order.png"
+import {useState} from 'react';
+import "../../styles/Order.css" 
 import {BsThreeDots} from "react-icons/bs"
 import {FiXCircle, FiCheckCircle, FiAlertCircle} from "react-icons/fi"
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-function Dashboard() {
+function Order() {
   const [activeOrderId, setActiveOrderId] = useState(null);
 
   const orderStatus = (orderId) => {
@@ -16,33 +12,33 @@ function Dashboard() {
     document.body.classList.add("status");
   };
 
-  const recentOrders = [
+  const allOrders = [
     { id: 1,
-      orderDate: "January 01 2023",
-      costumersName: "Josiel Mark Cute",
-      paymentMethod: "Cash",
-      status: "Delivered",
-      amount: 100.00
-    }, 
-    { id: 2,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
       status: "Pending",
       amount: 100.00
     },
-    { id: 3,
+    { id: 2,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
       status: "Cancelled",
       amount: 100.00
     },
+    { id: 3,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Delivered",
+      amount: 100.00
+    },
     { id: 4,
       orderDate: "January 01 2023",
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
-      status: "Cancelled",
+      status: "Pending",
       amount: 100.00
     },
     { id: 5,
@@ -50,6 +46,41 @@ function Dashboard() {
       costumersName: "Josiel Mark Cute",
       paymentMethod: "Cash",
       status: "Cancelled",
+      amount: 100.00
+    },
+    { id: 6,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Pending",
+      amount: 100.00
+    },
+    { id: 7,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Pending",
+      amount: 100.00
+    },
+    { id: 8,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Delivered",
+      amount: 100.00
+    },
+    { id: 9,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Pending",
+      amount: 100.00
+    },
+    { id: 10,
+      orderDate: "January 01 2023",
+      costumersName: "Josiel Mark Cute",
+      paymentMethod: "Cash",
+      status: "Pending",
       amount: 100.00
     }
   ]
@@ -66,47 +97,18 @@ function Dashboard() {
   };
 
   return (
-    <>
-    <div className='dashboard__card'>
-      <div className='cards'>
-        <div className='card-icon'>
-          <MdOutlineProductionQuantityLimits className='icon' />
+    <div className='orders'>
+      <div className="dashboard-table">
+        <div className='sort_orders dropdown'>
+        <label htmlFor="sortDropdown">Sort By:</label>
+        <select id="sortDropdown">
+          <option value="">Default</option>
+          <option value="date">Order Date</option>
+          <option value="name">Customer Name</option>
+          <option value="status">Status</option>
+          {/* Add more sorting options as needed */}
+        </select>
         </div>
-        <div>
-          <p className='card-title'>Products</p>
-          <h2 className='total'>100k</h2>
-        </div>
-      </div>
-      <div className='cards'>
-        <div className='card-icon'>
-          <img className="card__img" src={OrdersImg} alt="orders image" />
-        </div>
-        <div>
-          <p className='card-title'>Orders</p>
-          <h2 className='total'>100k</h2>
-        </div>
-      </div>
-      <div className='cards'>
-        <div className='card-icon'>
-          <FaUsers className='icon' />
-        </div>
-        <div>
-          <p className='card-title'>Costumer</p>
-          <h2 className='total'>100k</h2>
-        </div>
-      </div>
-      <div className='cards'>
-        <div className='card-icon'>
-          <img className="card__img" src={RevenueImg} alt="revenue image" />
-        </div>
-        <div>
-          <p className='card-title'>Revenue</p>
-          <h2 className='total'>100k</h2>
-        </div>
-      </div>
-    </div>
-    <div className="dashboard-table">
-        <h2 className="table-title">Recent Order</h2>
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
       <thead>
         <tr>
@@ -120,7 +122,7 @@ function Dashboard() {
         </tr>
       </thead>
       <tbody>
-        {recentOrders.map((order) => (
+        {allOrders.map((order) => (
   <tr key={order.id}>
     <td>{order.id}</td>
     <td>{order.orderDate}</td>
@@ -137,17 +139,17 @@ function Dashboard() {
       onClick={() => orderStatus(order.id)} />
       {activeOrderId === order.id && (
               <div className="select_status">
-              <Link to="/" className="link_status">
+              <a href="#" className="link_status">
                 <FiCheckCircle className="link_icon accept_icon" />
                 Accept order
-              </Link>
-              <Link to="/" className="link_status">
+              </a>
+              <a href="#" className="link_status">
                 <FiXCircle className="link_icon reject_icon" />
                 Reject order
-              </Link>
+              </a>
               <Link to="/order" className="link_status">
                 <FiAlertCircle className="link_icon view_icon" />
-                View order
+                View order  
               </Link>
             </div>
       )}
@@ -159,8 +161,8 @@ function Dashboard() {
       </tbody>
     </table>
     </div>
-    </>
+    </div>
   );
 }
 
-export default Dashboard;
+export default Order;
