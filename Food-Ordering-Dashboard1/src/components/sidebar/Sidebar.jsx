@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../../styles/Sidebar.css"
 import { AiOutlineSetting, AiOutlineUser, AiOutlineUnorderedList} from "react-icons/ai"
@@ -6,8 +7,23 @@ import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import {LuLayoutDashboard} from "react-icons/lu"
 import logo from "../../assets/images/logo2.png"
 import logo1 from "../../assets/images/logo__icon.png"
+import PropTypes from 'prop-types'; 
 
 function Sidebar({showSidebar}) {
+    const [setActiveBtn] = useState(null);
+
+    const handleBtnClick = (event) => {
+        const currentActive = document.querySelector(".btn__active");
+        if(currentActive) {
+            currentActive.classList.remove("btn__active");
+        }
+        event.target.classList.add("btn__active");
+        setActiveBtn(event.target);
+    };
+
+    Sidebar.propTypes = {
+        showSidebar: PropTypes.bool.isRequired, // Use 'bool' if showSidebar is a boolean
+    };
   return (
     <div className={`sidebar ${showSidebar ? "hide__sidebar" : ""}`}>
         <div className="sidebar-context">
@@ -16,37 +32,37 @@ function Sidebar({showSidebar}) {
         </div>
         <div className="sidebar-links">
                 <ul className='show_links'>
-                    <li className="links">
+                    <li className="links btn__active" onClick={handleBtnClick}>
                         <Link to="/dashboard" className="link">
                             <LuLayoutDashboard  className='icons'/>
                             Dashboard
                         </Link>
                     </li>  
-                    <li className="links">
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/products" className="link">
                             <MdOutlineProductionQuantityLimits className='icons'/>
                             Products
                         </Link>
                     </li>   
-                    <li className="links">
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/category" className="link">
                             <BiCategory className='icons'/>
                             Categories
                         </Link>
                     </li>
-                    <li className="links">
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/order-list" className="link">
                         <AiOutlineUnorderedList className='icons'/>
                             Order List
                         </Link>
                     </li>
-                    <li className="links">
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/costumers" className="link">
                         <AiOutlineUser className='icons'/>
                             Customers
                         </Link>
                     </li>
-                    <li className="links">
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/settings" className="link">
                         <AiOutlineSetting className='icons'/>
                             Settings
@@ -62,8 +78,8 @@ function Sidebar({showSidebar}) {
 
         {showSidebar && 
             <ul className='hide_links'>
-                <li className="links">
-                    <Link to="/dashboard" className="link">
+                <li className="links btn__active1">
+                    <Link to="/dashboard" className="link active">
                         <LuLayoutDashboard className="icons"/>
                     </Link>
                 </li>

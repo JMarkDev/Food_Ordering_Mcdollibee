@@ -147,7 +147,7 @@ function Dashboard() {
               </Link>
               <Link to="/order" className="link_status">
                 <FiAlertCircle className="link_icon view_icon" />
-                View order
+                View Details
               </Link>
             </div>
       )}
