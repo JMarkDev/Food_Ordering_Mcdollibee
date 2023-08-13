@@ -6,8 +6,8 @@ import Settings from './components/pages/Settings'
 import Sidebar from './components/sidebar/Sidebar'
 import Orderlist from './components/pages/Orderlist'
 import Order from './components/pages/Order'
-import React, { useState } from 'react';
-import User from './components/pages/User'
+import { useState } from 'react';
+import Customer from './components/pages/Customer'
 import "./App.css"
 import Navbar from './components/navbar/Navbar'
 
@@ -31,7 +31,7 @@ function App() {
           <Route path='/category' element={<Category />}/>
           <Route path='/order-list' element={<Orderlist/>}/>
           <Route path='/order' element={<Order />}/>
-          <Route path='/costumers' element={<User />} />
+          <Route path='/costumers' element={<Customer />} />
           <Route path='/settings' element={<Settings />}/>
         </Routes>
         </div>

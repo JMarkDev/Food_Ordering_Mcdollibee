@@ -1,6 +1,5 @@
-import React from 'react';
+import propTypes from 'prop-types';
 import { IoIosNotificationsOutline } from 'react-icons/io';
-import { AiOutlineSearch } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { useLocation } from 'react-router-dom';
 import '../../styles/Navbar.css';
@@ -16,6 +15,12 @@ const pageTitles = {
 };
 
 function Navbar({ showSidebar,  handleSidebarToggle}) {
+
+  Navbar.propTypes = {
+    showSidebar: propTypes.bool.isRequired,
+    handleSidebarToggle: propTypes.func.isRequired,
+  };
+  
   const location = useLocation();
   const pageTitle = pageTitles[location.pathname];
 
@@ -25,11 +30,7 @@ function Navbar({ showSidebar,  handleSidebarToggle}) {
         <RxHamburgerMenu className="burger__icon" onClick={handleSidebarToggle}/>
         <h3 className="nav_title">{pageTitle}</h3>
       </div>
-      <div className="search">
-        <input type="text" name="" id="" placeholder="search..." />
-        <span className="nav__icon search__icon">
-          <AiOutlineSearch />
-        </span>
+      <div className="nav_icon">
         <span className="nav__icon notification__icon">
           <IoIosNotificationsOutline />
         </span>

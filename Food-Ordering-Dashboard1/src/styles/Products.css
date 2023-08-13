@@ -39,9 +39,8 @@ th:last-child{
 }
 
 .modal-dialog {
-    max-width: 50%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px 10px;
 }
 
 .add__product--btn{
@@ -51,9 +50,20 @@ th:last-child{
     border-radius: 6px;
 } 
 
-  .save__btn {
+  .modal__btn{
     float: right;
   }
+
+.discard__btn{
+    color: #fff;
+    border: none;
+    background-color: #e0726b;
+    margin-left: 10px;
+}
+
+.discard__btn:hover{
+    background-color: #f2473e;
+}
   
 
 .table__icon{

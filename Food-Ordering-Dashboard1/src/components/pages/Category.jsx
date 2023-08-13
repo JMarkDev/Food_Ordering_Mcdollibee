@@ -1,7 +1,7 @@
 
 import {TbEdit} from "react-icons/tb"
 import {RiDeleteBin5Line} from "react-icons/ri"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, 
   Form, Input, Label, FormGroup} from 'reactstrap'; 
 import "../../styles/Category.css" 
@@ -67,9 +67,14 @@ function Category(args) {
       type="file"
     />
   </FormGroup>
+  <div className="modal__btn">
   <Button className="save__btn" color="primary" onClick={toggle}>
             Save
-  </Button>{' '}
+  </Button>
+  <Button className="discard__btn" color="primary" onClick={toggle}>
+            Discard
+  </Button>
+  </div>
 </Form>
         </ModalBody>
       </Modal>

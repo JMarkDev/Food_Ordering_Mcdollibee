@@ -1,7 +1,7 @@
 import "../../styles/Products.css"
 import {TbEdit} from "react-icons/tb"
 import {RiDeleteBin5Line} from "react-icons/ri"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, 
   Form, Input, Label, FormGroup} from 'reactstrap';  
 import image from "../../assets/images/5ceef7edbe1b196a030952b773b9636e.jpeg"
@@ -131,9 +131,14 @@ function Product(args) {
       placeholder="type here..."
     />
   </FormGroup>
+  <div className="modal__btn">
   <Button className="save__btn" color="primary" onClick={toggle}>
             Save
-  </Button>{' '}
+  </Button>
+  <Button className="discard__btn" color="primary" onClick={toggle}>
+            Discard
+  </Button>
+  </div>
 </Form>
         </ModalBody>
       </Modal>

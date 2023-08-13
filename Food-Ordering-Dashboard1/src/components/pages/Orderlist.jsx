@@ -54,34 +54,6 @@ function Order() {
       paymentMethod: "Cash",
       status: "Pending",
       amount: 100.00
-    },
-    { id: 7,
-      orderDate: "January 01 2023",
-      costumersName: "Josiel Mark Cute",
-      paymentMethod: "Cash",
-      status: "Pending",
-      amount: 100.00
-    },
-    { id: 8,
-      orderDate: "January 01 2023",
-      costumersName: "Josiel Mark Cute",
-      paymentMethod: "Cash",
-      status: "Delivered",
-      amount: 100.00
-    },
-    { id: 9,
-      orderDate: "January 01 2023",
-      costumersName: "Josiel Mark Cute",
-      paymentMethod: "Cash",
-      status: "Pending",
-      amount: 100.00
-    },
-    { id: 10,
-      orderDate: "January 01 2023",
-      costumersName: "Josiel Mark Cute",
-      paymentMethod: "Cash",
-      status: "Pending",
-      amount: 100.00
     }
   ]
 
