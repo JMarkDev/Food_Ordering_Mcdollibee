@@ -1,62 +1,64 @@
+import { useEffect, useState } from 'react';
 import "../../styles/Products.css"
 import {TbEdit} from "react-icons/tb"
 import {RiDeleteBin5Line} from "react-icons/ri"
-import { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, 
   Form, Input, Label, FormGroup} from 'reactstrap';  
-import image from "../../assets/images/5ceef7edbe1b196a030952b773b9636e.jpeg"
+import axios from "axios"
 
 function Product(args) {
   const [modal, setModal] = useState(false);
-
   const toggle = () => setModal(!modal);
 
-  const products = [
-    { id: 1,
-      image01: image,
-      title: "Burger",
-      price: 100,
-      category: "Burger", 
-      description: "hadsg",
-      ratings: 5
-    },
-    { id: 2,
-      image01: image,
-      title: "Burger",
-      price: 100,
-      category: "Burger", 
-      description: "hhhal;sdhg;hadsg",
-      ratings: 5
-    },
-    { id: 3,
-      image01: image,
-      title: "Burger",
-      price: 100,
-      category: "Burger", 
-      description: "hhal;sdhg;hadsg",
-      ratings: 5
-    },
-    { id: 4,
-      image01: image,
-      title: "Burger",
-      price: 100,
-      category: "Burger", 
-      description: "sdhg;hadsg",
-      ratings: 5
-    },
-    { id: 5,
-      image01: image,
-      title: "Burger",
-      price: 100,
-      category: "Burger", 
-      description: "gkjhhhal;sdhg;hadsg",
-      ratings: 5
-    }
+  const [data, setData] = useState([])
+  const [title, setTitle] = useState("");
+  const [image01, setImage01] = useState(null);
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState("");
+  // const [ratings, setRatings] = useState("");
 
-  ]
+  const addProduct = async (event) => {
+    event.preventDefault();
+
+    let formData = new FormData();
+    formData.append("title", title);
+    formData.append("images", image01);
+    formData.append("price", price);
+    formData.append("category", category);
+    formData.append("description", description);
+    // formData.append("ratings", ratings);
+
+    fetch('http://localhost:3001/api/upload', {
+      method: "POST", 
+      body: formData,
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.data);
+      alert("Added Successfully") 
+    })
+  };
+
+  const handleData = async () => {
+    const { data } = await axios.get('http://localhost:3001/api/products');
+    console.log(data)
+    setData(data)
+  }
+
+  const handleDelete = async (id) => {
+    const {data} = await axios.delete(`http://localhost:3001/api/products/delete/${id}`);
+    console.log(data);  
+    handleData()
+  }
+
+  useEffect(() => {
+    handleData();
+  }, [])
 
   return (
     <div className='products'>
+      <form action="" onSubmit={addProduct}>
       <div className="product__btn product__options">
       <Button color="primary" className="add__product--btn" onClick={toggle}>
         Add product
@@ -74,6 +76,8 @@ function Product(args) {
             name="name"
             placeholder="Product name"
             type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </FormGroup>
         <FormGroup>
@@ -85,6 +89,8 @@ function Product(args) {
             name="name"
             placeholder="Product price"
             type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
           />
         </FormGroup>
         <FormGroup>
@@ -95,6 +101,8 @@ function Product(args) {
       id="category"
       name="select"
       type="select"
+      value={category}
+      onChange={(e) => setCategory(e.target.value)}
     >
       <option>
         Burger
@@ -116,8 +124,9 @@ function Product(args) {
     </Label>
     <Input
       id="image"
-      name="file"
+      name="images"
       type="file"
+      onChange={(e) => setImage01(e.target.files[0])}
     />
   </FormGroup>
   <FormGroup>
@@ -129,10 +138,12 @@ function Product(args) {
       name="text"
       type="textarea"
       placeholder="type here..."
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
     />
   </FormGroup>
   <div className="modal__btn">
-  <Button className="save__btn" color="primary" onClick={toggle}>
+  <Button className="save__btn" color="primary" onClick={toggle} type="submit">
             Save
   </Button>
   <Button className="discard__btn" color="primary" onClick={toggle}>
@@ -143,6 +154,8 @@ function Product(args) {
         </ModalBody>
       </Modal>
       </div>
+      </form>
+     
       <div className="dashboard-table">
         <div className='sort_orders dropdown'>
         <label htmlFor="sortDropdown">Sort By:</label>
@@ -168,7 +181,7 @@ function Product(args) {
         </tr>
       </thead>
       <tbody>
-        {products.map(product => (
+        {data.map(product => (
           <tr key={product.id}>
           <td>{product.id}</td>
           <td><img className="product_img" src={product.image01} alt="" /></td>
@@ -184,7 +197,7 @@ function Product(args) {
             </button>
           </td>
           <td className="table__icon">
-            <button className="delete-btn">
+            <button className="delete-btn" onClick={() => handleDelete(product.id)}>
                 <RiDeleteBin5Line className="tbl__icon--delete"/>
                 Delete
             </button>

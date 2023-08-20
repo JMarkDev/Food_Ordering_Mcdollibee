@@ -19,7 +19,7 @@ function Sidebar({showSidebar}) {
             currentActive.classList.remove("btn__active");
         }
         event.target.classList.add("btn__active");
-        setActiveBtn(event.target);
+        setActiveBtn();
     };
 
     Sidebar.propTypes = {
