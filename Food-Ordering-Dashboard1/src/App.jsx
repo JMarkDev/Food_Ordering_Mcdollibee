@@ -5,11 +5,13 @@ import Category from './components/pages/Category'
 import Settings from './components/pages/Settings'
 import Sidebar from './components/sidebar/Sidebar'
 import Orderlist from './components/pages/Orderlist'
+import Review from './components/pages/Review'
 import Order from './components/pages/Order'
 import { useState } from 'react';
 import Customer from './components/pages/Customer'
-import "./App.css"
 import Navbar from './components/navbar/Navbar'
+import "./App.css"
+import Pagenotfound from './components/pages/Pagenotfound'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -33,6 +35,8 @@ function App() {
           <Route path='/order' element={<Order />}/>
           <Route path='/costumers' element={<Customer />} />
           <Route path='/settings' element={<Settings />}/>
+          <Route path='/review' element={<Review />}/>
+          <Route path='*' element={<Pagenotfound/>} />
         </Routes>
         </div>
     </div>

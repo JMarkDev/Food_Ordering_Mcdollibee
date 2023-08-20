@@ -5,6 +5,7 @@ import { AiOutlineSetting, AiOutlineUser, AiOutlineUnorderedList} from "react-ic
 import {BiCategory, BiLogOut} from "react-icons/bi";
 import {MdOutlineProductionQuantityLimits} from "react-icons/md"
 import {LuLayoutDashboard} from "react-icons/lu"
+import { VscOpenPreview } from "react-icons/vsc"
 import logo from "../../assets/images/logo2.png"
 import logo1 from "../../assets/images/logo__icon.png"
 import PropTypes from 'prop-types'; 
@@ -63,6 +64,12 @@ function Sidebar({showSidebar}) {
                         </Link>
                     </li>
                     <li className="links" onClick={handleBtnClick}>
+                        <Link to="/review" className="link">
+                        <VscOpenPreview className='icons'/>
+                            Review
+                        </Link>
+                    </li>
+                    <li className="links" onClick={handleBtnClick}>
                         <Link to="/settings" className="link">
                         <AiOutlineSetting className='icons'/>
                             Settings
@@ -101,6 +108,11 @@ function Sidebar({showSidebar}) {
                 <li className="links">
                     <Link to="/costumers" className="link">
                         <AiOutlineUser className='icons'/>
+                    </Link>
+                </li>
+                <li className="links">
+                    <Link to="/review" className="link">
+                        <VscOpenPreview className='icons'/>
                     </Link>
                 </li>
                 <li className="links">

@@ -12,6 +12,7 @@ const pageTitles = {
   '/order': 'Order',
   '/costumers': 'Customers',
   '/settings': 'Settings',
+  '/review': 'Review'
 };
 
 function Navbar({ showSidebar,  handleSidebarToggle}) {
