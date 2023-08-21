@@ -2,43 +2,15 @@ import { useEffect, useState } from 'react';
 import "../../styles/Products.css"
 import {TbEdit} from "react-icons/tb"
 import {RiDeleteBin5Line} from "react-icons/ri"
-import { Button, Modal, ModalHeader, ModalBody, 
-  Form, Input, Label, FormGroup} from 'reactstrap';  
+import { Button } from 'reactstrap';  
 import axios from "axios"
+import Addproduct from './Addproduct';
+import { Link } from 'react-router-dom';
 
-function Product(args) {
+function Product() {
   const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
 
   const [data, setData] = useState([])
-  const [title, setTitle] = useState("");
-  const [image01, setImage01] = useState(null);
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
-  // const [ratings, setRatings] = useState("");
-
-  const addProduct = async (event) => {
-    event.preventDefault();
-
-    let formData = new FormData();
-    formData.append("title", title);
-    formData.append("images", image01);
-    formData.append("price", price);
-    formData.append("category", category);
-    formData.append("description", description);
-    // formData.append("ratings", ratings);
-
-    fetch('http://localhost:3001/api/upload', {
-      method: "POST", 
-      body: formData,
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data.data);
-      alert("Added Successfully") 
-    })
-  };
 
   const handleData = async () => {
     const { data } = await axios.get('http://localhost:3001/api/products');
@@ -58,101 +30,12 @@ function Product(args) {
 
   return (
     <div className='products'>
-      <form action="" onSubmit={addProduct}>
+      <form action="">
       <div className="product__btn product__options">
-      <Button color="primary" className="add__product--btn" onClick={toggle}>
+      <Button color="primary" className="add__product--btn" onClick={() => setModal(true)}>
         Add product
       </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args} className="modal__body">
-        <ModalHeader toggle={toggle}>Add Products</ModalHeader>
-        <ModalBody>
-        <Form>
-        <FormGroup>
-          <Label for="productName">
-            Product name
-          </Label>
-          <Input
-            id="productName"
-            name="name"
-            placeholder="Product name"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="productPrice">
-            Price
-          </Label>
-          <Input
-            id="productName"
-            name="name"
-            placeholder="Product price"
-            type="number"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-    <Label for="category">
-      Category
-    </Label>
-    <Input
-      id="category"
-      name="select"
-      type="select"
-      value={category}
-      onChange={(e) => setCategory(e.target.value)}
-    >
-      <option>
-        Burger
-      </option>
-      <option>
-        Pizza
-      </option>
-      <option>
-        Drinks
-      </option>
-    
-    </Input>
-  </FormGroup>
-  <FormGroup>
-  </FormGroup>
-  <FormGroup>
-    <Label for="image">
-      Image
-    </Label>
-    <Input
-      id="image"
-      name="images"
-      type="file"
-      onChange={(e) => setImage01(e.target.files[0])}
-    />
-  </FormGroup>
-  <FormGroup>
-    <Label for="description">
-      Description
-    </Label>
-    <Input
-      id="description"
-      name="text"
-      type="textarea"
-      placeholder="type here..."
-      value={description}
-      onChange={(e) => setDescription(e.target.value)}
-    />
-  </FormGroup>
-  <div className="modal__btn">
-  <Button className="save__btn" color="primary" onClick={toggle} type="submit">
-            Save
-  </Button>
-  <Button className="discard__btn" color="primary" onClick={toggle}>
-            Discard
-  </Button>
-  </div>
-</Form>
-        </ModalBody>
-      </Modal>
+      <Addproduct modal={modal} toggle={() => setModal(!modal)} />
       </div>
       </form>
      
@@ -164,7 +47,6 @@ function Product(args) {
           <option value="ascending">Low to high</option>
           <option value="descending">High to low</option>
           <option value="ratings">Ratings</option>
-          {/* Add more sorting options as needed */}
         </select>
         </div>
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -191,9 +73,14 @@ function Product(args) {
           <td>{product.description}</td>
           <td>{product.ratings}</td>
           <td className="table__icon">
-            <button className="edit-btn">
-              <TbEdit className="tbl__icon--edit"/>
-                Edit
+            <button className="edit-btn"> 
+              <Link
+                      to={`/editproduct/${product.id}`}
+                      className="text-decoration-none"
+                    >
+                      <TbEdit className="tbl__icon--edit"/>
+                      Edit
+                    </Link>
             </button>
           </td>
           <td className="table__icon">

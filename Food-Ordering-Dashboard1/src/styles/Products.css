@@ -1,3 +1,30 @@
+.edit_product{
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    /* margin-left: 35px; */
+    background-color: #fff;
+    padding: 20px;
+}
+
+.back__btn{
+    position: absolute;
+    left: 0;
+    margin-left: 35px;
+}
+
+.back__btn button{
+    width: 100px;
+}
+
+.back{
+    color: #fff;
+}
+
+.back:hover{
+    color: #fff;
+}
+
 .products__title{
     font-size: 24px;
     color: #27374D;
@@ -14,10 +41,6 @@ th:last-child{
     justify-content: space-between;
     align-items: center;
 }
-
-/* .dropdown{
-    margin-right: 40px;
-} */
 
 .dropdown select{
     padding: 7px 20px;
@@ -37,11 +60,6 @@ th:last-child{
 .dropdown:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* .modal-dialog {
-    margin: 0 auto;
-    margin: 10px 10px;
-} */
 
 .add__product--btn{
     outline: none;

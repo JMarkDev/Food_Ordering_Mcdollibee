@@ -12,6 +12,7 @@ import Customer from './components/pages/Customer'
 import Navbar from './components/navbar/Navbar'
 import "./App.css"
 import Pagenotfound from './components/pages/Pagenotfound'
+import EditProduct from './components/pages/EditProduct'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Route path='/costumers' element={<Customer />} />
           <Route path='/settings' element={<Settings />}/>
           <Route path='/review' element={<Review />}/>
+          <Route path='/editproduct/:id' element={<EditProduct/>}/>
           <Route path='*' element={<Pagenotfound/>} />
         </Routes>
         </div>
