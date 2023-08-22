@@ -79,14 +79,14 @@ function Product() {
                       className="text-decoration-none"
                     >
                       <TbEdit className="tbl__icon--edit"/>
-                      Edit
+                      {/* Edit */}
                     </Link>
             </button>
           </td>
           <td className="table__icon">
             <button className="delete-btn" onClick={() => handleDelete(product.id)}>
                 <RiDeleteBin5Line className="tbl__icon--delete"/>
-                Delete
+                {/* Delete */}
             </button>
             </td>
         </tr>
